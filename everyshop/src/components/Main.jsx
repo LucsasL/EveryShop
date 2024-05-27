@@ -3,7 +3,6 @@ import { BsFillBagHeartFill } from "react-icons/bs";
 import data from "../db/data";
 
 const Main = () => {
-
   return (
     <>
       <div className="mainCont">

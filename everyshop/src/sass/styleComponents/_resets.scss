@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 // General Settings
 * {
@@ -19,4 +20,39 @@ html, body {
 
   overflow-x: clip;
   scroll-behavior: smooth;
+}
+
+// UI
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+#root > div {
+  height: calc(100% - 90px);
+
+  @include spaceBetween;
+}
+
+// Block Elements Reset
+fieldset {
+  border: none;
+  margin: 20px;
+}
+
+// Inline-Block Elements
+input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+button {
+  @include buttonGen(false, false);
+}
+
+// Text Elements
+a {
+  color: $color;
 }

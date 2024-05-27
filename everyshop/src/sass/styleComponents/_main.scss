@@ -1,0 +1,12 @@
+.mainCont {
+  width: calc(100% - 300px);
+  height: 100%;
+
+  &> * {
+    width: 100%;
+  }
+
+  main {
+    padding: 30px;
+  }
+}

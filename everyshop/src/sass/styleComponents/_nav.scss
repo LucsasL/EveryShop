@@ -1,0 +1,30 @@
+nav {
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid $color;
+
+  @include verticalFlex(space-around);
+
+  .icon {
+    height: 100px;
+
+    @include center;
+  }
+
+  > div {
+    width: 70%;
+  }
+
+  legend {
+    font: bold 1.3em $mainFont;
+    margin-bottom: 10px;
+  }
+
+  // input {
+
+  // }
+
+  label {
+    margin: 10px 0px  ;
+  }
+}

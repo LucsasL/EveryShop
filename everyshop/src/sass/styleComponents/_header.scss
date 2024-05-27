@@ -1,0 +1,18 @@
+header {
+  height: 90px;
+  padding: 20px;
+  border-bottom: 1px solid $color;
+
+  input {
+    width: 500px;
+    margin: 0px 20px;
+  }
+
+  a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+
+  @include center;
+}
