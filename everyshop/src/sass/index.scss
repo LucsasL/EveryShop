@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+// General Styles
+@import "./styleComponents/resets";
+@import "./styleComponents/variables";
+@import "./styleComponents/mixins";
+
+// Page Components
+@import "./styleComponents/header";
