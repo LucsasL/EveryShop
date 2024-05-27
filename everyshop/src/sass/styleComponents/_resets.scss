@@ -54,5 +54,10 @@ button {
 
 // Text Elements
 a {
+  text-decoration: none;
   color: $color;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

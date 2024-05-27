@@ -49,7 +49,11 @@ button {
 }
 
 a {
+  text-decoration: none;
   color: white;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 header {
@@ -99,6 +103,7 @@ nav label {
 .mainCont {
   width: calc(100% - 300px);
   height: 100%;
+  /* Products Grid Settings */
 }
 .mainCont > * {
   width: 100%;
@@ -106,13 +111,45 @@ nav label {
 .mainCont main {
   padding: 30px;
 }
+.mainCont .products {
+  padding: 30px;
+}
+.mainCont .grid {
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.mainCont .prodCont {
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.mainCont .prodImg img {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+}
+.mainCont .prodInfo {
+  padding: 5px;
+}
+.mainCont .starReview {
+  color: rgb(255, 200, 0);
+}
+.mainCont .currentPrice {
+  color: green;
+  font: bold 1.5em var(--mainFont);
+}
+.mainCont .cents {
+  font-size: 1em;
+}
 
 footer {
   width: 100%;
   height: 90px;
   border-top: 1px solid white;
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
