@@ -4,7 +4,7 @@ EVERYSHOP is a web project of a shop that sells everything. Developed in React J
 
 _**Work In Progress**_
 
-![img/](Everyshop | The shop that sells everything)
+![Everyshop | The shop that sells everything](img/)
 
 ## Technologies Used
 
