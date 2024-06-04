@@ -60,7 +60,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-header input {
+header input[type=text] {
   width: 500px;
   margin: 0px 20px;
 }
@@ -68,6 +68,69 @@ header a {
   display: inline-block;
   width: 40px;
   height: 40px;
+}
+header > div {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo button {
+  background: none;
+}
+header .inpDiv {
+  width: 50%;
+}
+header .configDiv {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .configDiv label {
+  background: rgb(201, 201, 201);
+  width: 90px;
+  height: 40px;
+  border-radius: 70px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+header .configDiv label::after {
+  content: "";
+  background: blue;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+input:checked ~ header .configDiv label::after {
+  content: "";
+  background: blue;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translateY(-50%);
+}
+header select {
+  background: transparent;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
 }
 
 .mainCont {
@@ -93,6 +156,7 @@ header a {
   padding: 20px;
   border: 1px solid black;
   border-radius: 8px;
+  cursor: pointer;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;

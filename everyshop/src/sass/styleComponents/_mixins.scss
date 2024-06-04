@@ -11,6 +11,12 @@
   align-items: center;
 }
 
+@mixin spaceAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin verticalFlex($flex: space-between) {
   display: flex;
   flex-flow: column nowrap;

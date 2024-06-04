@@ -26,6 +26,8 @@
     border: 1px solid $color;
     border-radius: 8px;
 
+    cursor: pointer;
+
     @include verticalFlex;
     align-items: flex-start;
   }
