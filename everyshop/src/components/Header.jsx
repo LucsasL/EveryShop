@@ -5,10 +5,10 @@ import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState("-30%");
 
   const lateralNav = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen("0");
   }
 
   return (
@@ -16,21 +16,17 @@ const Header = () => {
       <header>
         <div>
           <div className="logo">
-            <button onClick={() => lateralNav()}>
-              menu
-            </button>
+            <button onClick={() => lateralNav()}>menu</button>
 
-            <h1>
-              EveryShop
-            </h1>
+            <h1>EveryShop</h1>
           </div>
-          
+
           <div className="inpDiv">
             <input
               type="text"
               className="searchInput"
               placeholder="Enter your search shoes"
-              onChange={(e) => (e)}
+              onChange={(e) => e}
             />
             <a href="http://">
               <FiHeart className="nav-icons" />
@@ -56,23 +52,31 @@ const Header = () => {
         </div>
       </header>
 
-      {
-        menuOpen ? (
-          <nav>
-            <div>
-              <ul>
-                <li><a href="https://">Shoes</a></li>
-                <li><a href="https://">Shoes</a></li>
-                <li><a href="https://">Shoes</a></li>
-                <li><a href="https://">Shoes</a></li>
-                <li><a href="https://">Shoes</a></li>
-              </ul>
-            </div>
-          </nav>
-        ) : (
-        <></>
-      )
-      }
+      <nav style={{ left: menuOpen }}>
+        <div>
+          <ul>
+            <li>
+              <a href="https://">Shoes</a>
+            </li>
+            <li>
+              <a href="https://">Shoes</a>
+            </li>
+            <li>
+              <a href="https://">Shoes</a>
+            </li>
+            <li>
+              <a href="https://">Shoes</a>
+            </li>
+            <li>
+              <a href="https://">Shoes</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="closeBtn" onClick={() => setMenuOpen("-30%")}>
+          X
+        </div>
+      </nav>
     </>
   );
 }
