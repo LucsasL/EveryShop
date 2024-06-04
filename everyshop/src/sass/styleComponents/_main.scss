@@ -1,5 +1,4 @@
 .mainCont {
-  width: calc(100% - 300px);
   height: 100%;
 
   &> * {
@@ -27,9 +26,8 @@
     border: 1px solid $color;
     border-radius: 8px;
 
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+    @include verticalFlex;
+    align-items: flex-start;
   }
 
   .prodImg img {
