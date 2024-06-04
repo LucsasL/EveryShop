@@ -1,16 +1,22 @@
 // Importing Hooks
-import { useState } from "react";
+import { useState, useContext } from "react";
 
+// Components Data
+import navMenuChanger from "./nav";
+
+// React Icons
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 
+// Header Component
 const Header = () => {
   const [darkTheme, setDarkTheme] = useState(false);
   const [themeColor, setThemeColor] = useState("#fff");
-  const [menuOpen, setMenuOpen] = useState("-30%");
+
+  const navStateChange = useContext(navMenuChanger);  
 
   const lateralNav = () => {
-    setMenuOpen("0");
+    navStateChange("0");
   }
 
   const changeTheme = () => {
@@ -77,32 +83,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-
-      <nav style={{ left: menuOpen }}>
-        <div>
-          <ul>
-            <li>
-              <a href="https://">Shoes</a>
-            </li>
-            <li>
-              <a href="https://">Shoes</a>
-            </li>
-            <li>
-              <a href="https://">Shoes</a>
-            </li>
-            <li>
-              <a href="https://">Shoes</a>
-            </li>
-            <li>
-              <a href="https://">Shoes</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="closeBtn" onClick={() => setMenuOpen("-30%")}>
-          X
-        </div>
-      </nav>
     </>
   );
 }
