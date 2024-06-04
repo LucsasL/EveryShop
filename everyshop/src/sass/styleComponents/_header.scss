@@ -54,36 +54,43 @@ header {
       position: relative;
   
       cursor: pointer;
+    }
+
+    input {
+      display: none;
+    }
   
-      input {
-        // display: none; 
-      }
-  
-      &::after {
-        content: '';
-        background: blue;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-  
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        transform: translateY(-50%);
-      }
-  
-      input:checked ~ &::after {
-        content: '';
-        background: blue;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-  
-        position: absolute;
-        top: 50%;
-        left: 95%;
-        transform: translateY(-50%);
-      }
+    i.thumb {
+      content: '';
+      background: white;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.419);
+      
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 50%;
+      left: 3%;
+      transform: translateY(-50%);
+      transition: all .5s ease;
+    }
+
+    input:checked ~ span i.thumb {
+      content: '';
+      background: rgb(14, 14, 14);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 50%;
+      left: 97%;
+      transform: translate(-100%, -50%);
+    }
+
+    input:checked ~ .toggleBody {
+      background: #000;
     }
   }
 

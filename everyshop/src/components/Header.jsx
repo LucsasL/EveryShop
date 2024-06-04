@@ -40,8 +40,11 @@ const Header = () => {
           </div>
 
           <div className="configDiv">
-            <label htmlFor="themeInp">
+            <label htmlFor="themeInp" className="toggleBody">
               <input type="checkbox" name="theme" id="themeInp" />
+              <span>
+                <i className="thumb"></i>
+              </span>
             </label>
 
             <select name="languageSel" id="langSel">
