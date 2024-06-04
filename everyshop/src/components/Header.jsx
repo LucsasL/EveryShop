@@ -5,10 +5,23 @@ import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 
 const Header = () => {
+  const [darkTheme, setDarkTheme] = useState(false);
+  const [themeColor, setThemeColor] = useState("#fff");
   const [menuOpen, setMenuOpen] = useState("-30%");
 
   const lateralNav = () => {
     setMenuOpen("0");
+  }
+
+  const changeTheme = () => {
+    setDarkTheme(!darkTheme);
+
+    if (darkTheme) {
+      setThemeColor("#151515");
+      return;
+    }
+
+    setThemeColor("#fff");
   }
 
   return (
@@ -40,8 +53,18 @@ const Header = () => {
           </div>
 
           <div className="configDiv">
-            <label htmlFor="themeInp" className="toggleBody">
-              <input type="checkbox" name="theme" id="themeInp" />
+            <label 
+              htmlFor="themeInp" 
+              className="toggleBody"
+              style={{ background: themeColor }}
+            >
+              <input 
+                type="checkbox" 
+                name="theme" 
+                id="themeInp" 
+                value={darkTheme}
+                onChange={() => changeTheme()}
+              />
               <span>
                 <i className="thumb"></i>
               </span>

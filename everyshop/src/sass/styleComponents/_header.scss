@@ -34,7 +34,30 @@ header {
   }
   
   .inpDiv {
-    width: 50%;
+    width: 55%;
+    
+    @include center;
+    
+    a {
+      @include center;
+      display: inline-flex;
+
+      background: white;
+
+      width: 50px;
+      height: 50px;
+      margin: 0px 5px;
+      border-radius: 50%;
+
+      &:hover {
+        background: rgb(206, 206, 206);
+      }
+
+      .nav-icons {
+        width: 30px;
+        height: 30px;
+      }
+    }
   }
 
   .configDiv {
@@ -78,7 +101,7 @@ header {
 
     input:checked ~ span i.thumb {
       content: '';
-      background: rgb(14, 14, 14);
+      background: rgb(25, 25, 25);
       width: 35px;
       height: 35px;
       border-radius: 50%;
@@ -87,10 +110,6 @@ header {
       top: 50%;
       left: 97%;
       transform: translate(-100%, -50%);
-    }
-
-    input:checked ~ .toggleBody {
-      background: #000;
     }
   }
 
