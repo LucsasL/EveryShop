@@ -7,6 +7,7 @@ import navMenuChanger from "./nav";
 // React Icons
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
+import { IoMenu } from "react-icons/io5";
 
 // Header Component
 const Header = () => {
@@ -35,7 +36,9 @@ const Header = () => {
       <header>
         <div>
           <div className="logo">
-            <button onClick={() => lateralNav()}>menu</button>
+            <button onClick={() => lateralNav()}>
+              <IoMenu />
+            </button>
 
             <h1>EveryShop</h1>
           </div>
