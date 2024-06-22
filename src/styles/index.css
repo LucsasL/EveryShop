@@ -299,11 +299,17 @@ footer .credit {
 }
 .prodSect .prodImg {
   background: blue;
-  padding: 50px;
   border-radius: 30px;
+  border: 5px solid red;
+}
+.prodSect .prodImg .nextImgs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .prodSect .prodImg .nextImgs picture, .prodSect .prodImg .nextImgs img {
   height: 50px;
+  border: 3px solid gray;
 }
 .prodSect .prodDesc {
   display: flex;
