@@ -94,7 +94,7 @@ header .inpDiv {
   justify-content: center;
   align-items: center;
 }
-header .inpDiv a {
+header .inpDiv button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,13 +102,14 @@ header .inpDiv a {
   background: white;
   width: 50px;
   height: 50px;
+  padding: 10px;
   margin: 0px 5px;
   border-radius: 50%;
 }
-header .inpDiv a:hover {
+header .inpDiv button:hover {
   background: rgb(206, 206, 206);
 }
-header .inpDiv a .nav-icons {
+header .inpDiv button .nav-icons {
   width: 30px;
   height: 30px;
 }

@@ -50,39 +50,15 @@ const Header = () => {
               placeholder="Enter your search shoes"
               onChange={(e) => e}
             />
-            <a href="http://">
+            <button href="http://">
               <FiHeart className="nav-icons" />
-            </a>
-            <a href="https://">
+            </button>
+            <button href="https://">
               <AiOutlineShoppingCart className="nav-icons" />
-            </a>
-            <a href="https://">
+            </button>
+            <button href="https://">
               <AiOutlineUserAdd className="nav-icons" />
-            </a>
-          </div>
-
-          <div className="configDiv">
-            <label 
-              htmlFor="themeInp" 
-              className="toggleBody"
-              style={{ background: themeColor }}
-            >
-              <input 
-                type="checkbox" 
-                name="theme" 
-                id="themeInp" 
-                value={darkTheme}
-                onChange={() => changeTheme()}
-              />
-              <span>
-                <i className="thumb"></i>
-              </span>
-            </label>
-
-            <select name="languageSel" id="langSel">
-              <option value="English">English</option>
-              <option value="Português">Português</option>
-            </select>
+            </button>
           </div>
         </div>
       </header>

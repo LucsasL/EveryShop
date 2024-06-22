@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <Header />
+      <Nav />
       <Router>
         <Routes>
           <Route exact path="/" element={<Main />} />
