@@ -1,3 +1,7 @@
+// Hook Imports
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Components Imports
 import Header from "./components/Header";
 import Nav from "./components/nav";
 import Main from "./components/Main";
@@ -8,8 +12,11 @@ function App() {
   return (
     <>
       <Header />
-      <Nav />
-      <Main />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Main />} />
+        </Routes>
+      </Router>
       <Footer />
     </>
   );
