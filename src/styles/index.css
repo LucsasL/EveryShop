@@ -213,6 +213,7 @@ nav .closeBtn:hover {
   gap: 30px;
 }
 .mainCont .prodCont {
+  min-height: 400px;
   padding: 20px;
   border: 1px solid black;
   border-radius: 8px;

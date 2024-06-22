@@ -1,5 +1,14 @@
+// Hooks Import
+import { NavLink } from "react-router-dom";
+
+// Icons Import
 import { BsFillBagHeartFill } from "react-icons/bs";
+
+// Data Import
 import data from "../db/data";
+
+// Components Import
+import Product from "../pages/product";
 
 const Main = () => {
   return (
@@ -29,46 +38,48 @@ const Main = () => {
               {data.map(
                 ({ img, title, star, reviews, prevPrice, newPrice }) => {
                   return (
-                    <div
-                      className="prodCont"
-                      key={Math.floor(Math.random() * 100)}
-                    >
-                      <div className="prodImg">
-                        <picture>
-                          <img src={img} alt={title} />
-                        </picture>
-                      </div>
-                      <div className="prodInfo">
-                        <h3>{title}</h3>
-                        <p>
-                          <span className="starReview">
-                            {star}
-                            {star}
-                            {star}
-                            {star}
-                            {star}
-                          </span>{" "}
-                          {reviews}
-                        </p>
-                        <div
-                          style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "flex-end",
-                          }}
-                        >
+                    <NavLink to={`/product/${title.replace(" ", "_")}`}>
+                      <div
+                        className="prodCont"
+                        key={Math.floor(Math.random() * 100)}
+                      >
+                        <div className="prodImg">
+                          <picture>
+                            <img src={img} alt={title} />
+                          </picture>
+                        </div>
+                        <div className="prodInfo">
+                          <h3>{title}</h3>
                           <p>
-                            <span>
-                              <del>{prevPrice}</del>
+                            <span className="starReview">
+                              {star}
+                              {star}
+                              {star}
+                              {star}
+                              {star}
                             </span>{" "}
-                            <br />
-                            <span className="currentPrice">${newPrice}</span>
-                            <span className="currentPrice cents">.00</span>
+                            {reviews}
                           </p>
-                          <BsFillBagHeartFill />
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "flex-end",
+                            }}
+                          >
+                            <p>
+                              <span>
+                                <del>{prevPrice}</del>
+                              </span>{" "}
+                              <br />
+                              <span className="currentPrice">${newPrice}</span>
+                              <span className="currentPrice cents">.00</span>
+                            </p>
+                            <BsFillBagHeartFill />
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </NavLink>
                   );
                 }
               )}
