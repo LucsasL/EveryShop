@@ -1,31 +1,40 @@
-// import { useContext } from "react";
+import { useContext } from "react";
+
+// 
+import { productSelected } from "../App";
 
 function Product() {
-  // const { prodTitle, prodImg, prodText, prodPrice } = useContext();
+  const { img, title, prevPrice, newPrice } = useContext(productSelected);
 
   return (
     <>
-      <section className="prodSect">
+      <main>
         <div>
-          <h1>
-            {}
-          </h1>
-
-          <div className="prodInfo">
-            <div className="prodImg">
-              <picture>
-                <source media="(min-width: )" srcset="" />
-                <figure>
-                  <img src="" alt="" />
-                  <figcaption>{}</figcaption>
-                </figure>
-              </picture>
+          <section className="prodSect">
+            <div>
+              <h1>
+                {title}
+              </h1>
+              <div className="prodInfo">
+                <div className="prodImg">
+                  <picture>
+                    <source media="(min-width: )" srcSet="" />
+                    <figure>
+                      <img src={img} alt="BRUH" />
+                      <figcaption>{}</figcaption>
+                    </figure>
+                  </picture>
+                </div>
+                <div className="divDesc">
+                  {
+                    (prevPrice) (newPrice)
+                  }
+                </div>
+              </div>
             </div>
-
-            <div className="divDesc"></div>
-          </div>
+          </section>
         </div>
-      </section>
+      </main>
     </>
   );
 }

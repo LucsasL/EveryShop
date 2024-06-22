@@ -8,7 +8,7 @@ import { BsFillBagHeartFill } from "react-icons/bs";
 import data from "../db/data";
 
 // Components Import
-import Product from "../pages/product";
+// import Product from "../pages/product";
 
 const Main = () => {
   return (
@@ -38,7 +38,7 @@ const Main = () => {
               {data.map(
                 ({ img, title, star, reviews, prevPrice, newPrice }) => {
                   return (
-                    <NavLink to={`/product/${title.replace(" ", "_")}`}>
+                    <NavLink to={`product/${title}`}>
                       <div
                         className="prodCont"
                         key={Math.floor(Math.random() * 100)}
