@@ -5,12 +5,12 @@ import React, { createContext } from "react";
 // Components Imports
 import Header from "./components/Header";
 import Nav from "./components/nav";
-// import Main from "./components/Main";
+import Main from "./components/Main";
 import Footer from "./components/Footer";
 import "./styles/index.css";
 
 // Route/Page Import
-import Product from "./pages/product";
+// import Product from "./pages/product";
 
 // Data Import
 import data from "./db/data";
@@ -24,7 +24,7 @@ function App() {
     <>
       <Header />
       <Nav />
-      <Product />
+      <Main />
       {/* <Router>
         <Routes>
           <Route exact path="/" element={<Main />} />
