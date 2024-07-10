@@ -1,6 +1,9 @@
+// Import Libraries
+import express from "express";
+
 // Hook Imports
 import React, { createContext } from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components Imports
 import Header from "./components/Header";
@@ -19,18 +22,20 @@ const { img, title, star, reviews, prevPrice, newPrice } = data;
 // Context
 export const productSelected = createContext(data);
 
+// Express Instance
+const app = express();
+
 function App() {
   return (
     <>
       <Header />
       <Nav />
-      <Main />
-      {/* <Router>
+      <Router>
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <Route path={`/product/${title}`} element={<Product />} />
+          {/* <Route path={`/product/${title}`} element={<Product />} /> */}
         </Routes>
-      </Router> */}
+      </Router>
       <Footer />
     </>
   );
